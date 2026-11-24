@@ -1,0 +1,18 @@
+{
+  "name": "Tezene – Bağlama Atölyesi",
+  "short_name": "Tezene",
+  "description": "Bağlama için akort, perde haritası, makam dizileri, metronom, kulak eğitimi ve çalışma defteri.",
+  "lang": "tr",
+  "start_url": "./#akort",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e0e10",
+  "theme_color": "#0e0e10",
+  "icons": [
+    { "src": "ikon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "ikon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "ikon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "ikon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

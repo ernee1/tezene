@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Tezene – Bağlama Atölyesi</title>
+<meta name="description" content="Bağlama için akort, perde haritası, makam dizileri, metronom, kulak eğitimi ve çalışma defteri.">
+<meta name="theme-color" content="#0e0e10">
+<meta name="color-scheme" content="dark light">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="ikon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="ikon-192.png">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-akort" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5" stroke-dasharray="1.6 2.2"/><circle cx="12" cy="12" r="1.2"/></symbol>
+  <symbol id="i-sap" viewBox="0 0 24 24"><path d="M3 8h18M3 16h18"/><path d="M7 6v12M11.5 6v12M15.5 6v12M19 6v12"/></symbol>
+  <symbol id="i-makam" viewBox="0 0 24 24"><path d="M4 19h4v-4h4v-4h4V7h4"/><circle cx="4" cy="19" r="1.3"/></symbol>
+  <symbol id="i-ritim" viewBox="0 0 24 24"><path d="M9 3h6l3.5 18h-13z"/><path d="M12 15l5-8"/></symbol>
+  <symbol id="i-kulak" viewBox="0 0 24 24"><path d="M7 10a5 5 0 1 1 10 0c0 3-3 4-3 6.5a2.5 2.5 0 0 1-5 0"/><path d="M10 10a2 2 0 1 1 3.5 1.3"/></symbol>
+  <symbol id="i-defter" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-ayar" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+  <symbol id="i-mik" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/></symbol>
+  <symbol id="i-ses" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6"/></symbol>
+  <symbol id="i-oynat" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  <symbol id="i-dur" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1"/></symbol>
+  <symbol id="i-yukari" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-asagi" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-sil" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"/></symbol>
+  <symbol id="i-arti" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-eksi" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-kayit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/></symbol>
+  <symbol id="i-ev" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4z"/></symbol>
+  <symbol id="i-ders" viewBox="0 0 24 24"><path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"/></symbol>
+  <symbol id="i-daha" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></symbol>
+  <symbol id="i-tamam" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-sag" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-sol" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-kapat" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-alev" viewBox="0 0 24 24"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5 1-8.5z"/></symbol>
+  <symbol id="i-saat" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-kalem" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+  <symbol id="i-indir" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-hedef" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-baglama" viewBox="0 0 640 200">
+    <path style="fill:var(--ceviz-koyu);stroke:none" d="M60 92h380v16H60z"/>
+    <path style="fill:var(--ceviz);stroke:none" d="M8 86c0-6 4-10 10-10h46v48H18c-6 0-10-4-10-10z"/>
+    <g style="fill:var(--ladin-koyu);stroke:none"><rect x="16" y="64" width="8" height="14" rx="3"/><rect x="32" y="64" width="8" height="14" rx="3"/><rect x="48" y="64" width="8" height="14" rx="3"/><rect x="16" y="122" width="8" height="14" rx="3"/><rect x="32" y="122" width="8" height="14" rx="3"/><rect x="48" y="122" width="8" height="14" rx="3"/></g>
+    <path style="fill:var(--ceviz);stroke:none" d="M428 100C436 68 488 24 552 24c56 0 84 38 84 76s-28 76-84 76c-64 0-116-44-124-76z"/>
+    <path style="fill:var(--ladin);stroke:none" d="M444 100c8-26 52-62 108-62 46 0 70 30 70 62s-24 62-70 62c-56 0-100-36-108-62z"/>
+    <path style="fill:none;stroke:var(--ladin);stroke-width:1.6" d="M96 92v16M128 92v16M158 92v16M186 92v16M212 92v16M236 92v16M258 92v16M279 92v16M298 92v16M316 92v16M333 92v16M349 92v16M364 92v16M378 92v16M391 92v16M403 92v16M414 92v16"/>
+    <rect style="fill:var(--ceviz-koyu);stroke:none" x="590" y="88" width="7" height="24" rx="2"/>
+    <circle style="fill:var(--ceviz-koyu);stroke:none" cx="528" cy="70" r="4"/><circle style="fill:var(--ceviz-koyu);stroke:none" cx="536" cy="132" r="3"/>
+    <path style="fill:none;stroke:#f3e6cf;stroke-width:.9;opacity:.9" d="M64 95.5H593M64 100H593M64 104.5H593"/>
+  </symbol>
+</svg>
+
+<div class="kabuk">
+<nav class="ray" id="ray" aria-label="Bölümler">
+  <div class="marka"><span class="marka-plak" aria-hidden="true"></span><span><b>Tezene</b><small>Bağlama atölyesi</small></span></div>
+  <ul>
+    <li class="birincil-nav"><button data-git="ana"><svg><use href="#i-ev"/></svg><span>Ana sayfa</span></button></li>
+    <li class="birincil-nav"><button data-git="dersler"><svg><use href="#i-ders"/></svg><span>Dersler</span></button></li>
+    <li class="birincil-nav"><button data-git="akort"><svg><use href="#i-akort"/></svg><span>Akort</span></button></li>
+    <li class="birincil-nav"><button data-git="ritim"><svg><use href="#i-ritim"/></svg><span>Ritim</span></button></li>
+    <li><button data-git="sap"><svg><use href="#i-sap"/></svg><span>Sap</span></button></li>
+    <li class="pro"><button data-git="makam"><svg><use href="#i-makam"/></svg><span>Makam</span></button></li>
+    <li><button data-git="kulak"><svg><use href="#i-kulak"/></svg><span>Kulak</span></button></li>
+    <li><button data-git="defter"><svg><use href="#i-defter"/></svg><span>Defter</span></button></li>
+    <li><button data-git="ayar"><svg><use href="#i-ayar"/></svg><span>Ayarlar</span></button></li>
+    <li class="daha-nav"><button id="dahaBtn" aria-haspopup="dialog" aria-controls="dahaSayfa"><svg><use href="#i-daha"/></svg><span>Daha</span></button></li>
+  </ul>
+  <div class="ray-alt">
+    <button class="met-mini" id="metMini" hidden><i class="nabiz"></i><span>Metronom</span><b></b></button>
+    <div class="mod-anahtar" role="radiogroup" aria-label="Kullanım modu" id="modRay">
+      <button role="radio" data-mod="kolay">Kolay</button><button role="radio" data-mod="pro">Profesyonel</button>
+    </div>
+    <div class="duzen-ozet" id="duzenOzet"></div>
+  </div>
+</nav>
+
+<div class="perde-ortu" id="dahaOrtu" hidden></div>
+<div class="alt-sayfa" id="dahaSayfa" role="dialog" aria-modal="true" aria-labelledby="dahaBaslik" hidden>
+  <div class="alt-sayfa-ust"><h2 id="dahaBaslik">Diğer bölümler</h2><button class="btn ikon" id="dahaKapat" aria-label="Kapat"><svg><use href="#i-kapat"/></svg></button></div>
+  <div class="daha-izgara">
+    <button data-git="sap"><svg><use href="#i-sap"/></svg><span>Perde haritası</span></button>
+    <button data-git="makam" class="pro"><svg><use href="#i-makam"/></svg><span>Makamlar</span></button>
+    <button data-git="kulak"><svg><use href="#i-kulak"/></svg><span>Kulak eğitimi</span></button>
+    <button data-git="defter"><svg><use href="#i-defter"/></svg><span>Defter ve kayıtlar</span></button>
+    <button data-git="ayar"><svg><use href="#i-ayar"/></svg><span>Ayarlar</span></button>
+  </div>
+  <div class="mod-anahtar genis" role="radiogroup" aria-label="Kullanım modu" id="modSayfa">
+    <button role="radio" data-mod="kolay">Kolay mod</button><button role="radio" data-mod="pro">Profesyonel mod</button>
+  </div>
+</div>
+
+<main id="ana">
+  <!-- ANA SAYFA -->
+  <section id="v-ana" class="gorunum" data-v="ana">
+    <header class="baslik"><h1 id="anaSelam">Merhaba</h1><div class="baslik-sag" id="anaTarih"></div></header>
+    <div class="karsilama" id="karsilama" hidden>
+      <svg class="baglama-cizim" viewBox="0 0 640 200" aria-hidden="true"><use href="#i-baglama"/></svg>
+      <h2>Tezene’ye hoş geldiniz</h2>
+      <p>Sazınızı akort etmekten ilk makam dizinize kadar adım adım yanınızdayız. Size uygun başlangıcı seçin; daha sonra Ayarlar’dan değiştirebilirsiniz.</p>
+      <div class="secim-kartlari">
+        <button class="secim-karti" data-ilk="kolay"><b>Saz çalmaya yeni başlıyorum</b><span>Kolay mod. Sade anlatım, adım adım dersler, ilk dersle başlarsınız.</span></button>
+        <button class="secim-karti" data-ilk="pro"><b>Saz çalıyorum, kendimi geliştirmek istiyorum</b><span>Profesyonel mod. Koma, kromatik akort, makam araçları ve gelişmiş ayarlar.</span></button>
+      </div>
+    </div>
+    <div class="ana-izgara" id="anaIcerik">
+      <article class="devam" id="devamKart"></article>
+      <section class="kart gunluk" aria-labelledby="gunlukB"><div class="kart-ust"><h2 id="gunlukB">Bugünün çalışması</h2><span class="soluk kucuk" id="gunlukOzet"></span></div><ol class="gorevler" id="gorevler"></ol></section>
+      <section class="kart gelisim" aria-labelledby="gelisimB"><div class="kart-ust"><h2 id="gelisimB">Gelişiminiz</h2></div><div class="istatistik" id="istatistik"></div><div class="seviye-cubuklari" id="seviyeCubuk"></div></section>
+      <section class="kart araclar" aria-labelledby="aracB"><div class="kart-ust"><h2 id="aracB">Araçlar</h2></div>
+        <div class="arac-izgara">
+          <button data-git="akort"><svg><use href="#i-akort"/></svg><b>Akort</b><span>Mikrofonla tel akordu</span></button>
+          <button data-git="ritim"><svg><use href="#i-ritim"/></svg><b>Metronom</b><span>Usuller ve ritim testi</span></button>
+          <button data-git="sap"><svg><use href="#i-sap"/></svg><b>Perde haritası</b><span>Hangi perde hangi ses</span></button>
+          <button data-git="defter" data-odak="skKayit"><svg><use href="#i-mik"/></svg><b>Kayıt</b><span>Çalışını kaydet ve dinle</span></button>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- DERSLER -->
+  <section id="v-dersler" class="gorunum" data-v="dersler" hidden>
+    <header class="baslik"><h1>Dersler</h1><div class="baslik-sag" id="dersOzet"></div></header>
+    <div class="sekmeler genis" id="dersSekme" role="tablist" aria-label="Ders türü">
+      <button role="tab" data-s="ders" aria-selected="true">Dersler</button>
+      <button role="tab" data-s="egz" aria-selected="false">Egzersizler</button>
+    </div>
+    <div id="dersListe" class="ders-liste" role="tabpanel"></div>
+    <div id="egzListe" class="egz-liste" role="tabpanel" hidden></div>
+    <p class="not">Dersler genel saz eğitimi bilgisi içerir ve bir öğretmenin yerini tutmaz. Mikrofonlu adımlar sesi ve zamanlamayı ölçer; duruş ve tezene tekniğini göremez.</p>
+  </section>
+
+  <!-- DERS OYNATICI -->
+  <section id="v-ders" class="gorunum" data-v="ders" hidden>
+    <header class="baslik ders-baslik">
+      <button class="btn ikon" id="dersGeri" aria-label="Derslere dön"><svg><use href="#i-sol"/></svg></button>
+      <div class="ders-baslik-metin"><span class="soluk kucuk" id="dersUst"></span><h1 id="dersAd"></h1></div>
+    </header>
+    <div class="adim-cubugu" id="adimCubugu" aria-hidden="true"></div>
+    <article class="adim kart" id="dersAdim" aria-live="polite"></article>
+    <div class="ders-alt">
+      <button class="btn buyuk" id="adimGeri"><svg><use href="#i-sol"/></svg><span>Geri</span></button>
+      <button class="btn birincil buyuk" id="adimIleri"><span>Devam</span><svg><use href="#i-sag"/></svg></button>
+    </div>
+  </section>
+
+  <!-- AKORT -->
+  <section id="v-akort" class="gorunum" data-v="akort" hidden>
+    <header class="baslik"><h1>Akort</h1><div class="baslik-sag" id="akDuzenAd"></div></header>
+    <div class="akort-izgara">
+      <div class="strob-kap">
+        <canvas id="strob" width="720" height="720" aria-hidden="true"></canvas>
+        <div class="strob-orta"><span id="akDurumNokta" class="durum-nokta"></span></div>
+      </div>
+      <div class="okuma">
+        <div class="okuma-not"><span id="akNot">—</span><sub id="akOkt"></sub></div>
+        <div class="okuma-sayilar">
+          <div class="hucre-sayi"><span class="etiket">Sapma</span><b id="akSent">—</b><small>sent</small></div>
+          <div class="hucre-sayi"><span class="etiket">Frekans</span><b id="akHz">—</b><small>Hz</small></div>
+          <div class="hucre-sayi"><span class="etiket">Hedef</span><b id="akHedefHz">—</b><small>Hz</small></div>
+        </div>
+        <p class="okuma-durum" id="akDurum" aria-live="polite">Dinlemeye başlayın, sonra tele vurun.</p>
+        <div class="dugmeler">
+          <button class="btn birincil buyuk" id="akBasla"><svg><use href="#i-mik"/></svg><span>Dinlemeye başla</span></button>
+          <button class="btn" id="akRef" disabled><svg><use href="#i-ses"/></svg><span>Hedef sesi</span></button>
+        </div>
+        <p class="hata" id="akHata" hidden></p>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-satir">
+        <div class="alan genis"><span class="etiket">Hedef tel</span>
+          <div class="sekmeler" id="akHedef" role="radiogroup" aria-label="Hedef tel">
+            <button role="radio" data-h="oto">Otomatik</button>
+            <button role="radio" data-h="2">Üst</button>
+            <button role="radio" data-h="1">Orta</button>
+            <button role="radio" data-h="0">Alt</button>
+            <button role="radio" data-h="krom" class="pro">Kromatik</button>
+          </div>
+        </div>
+        <label class="alan pro"><span class="etiket">Kromatik ses sistemi</span>
+          <select id="akSistem"><option value="53">Türk · 53 koma</option><option value="12">Batı · 12 yarım ses</option></select></label>
+        <label class="alan"><span class="etiket">Düzen</span><select id="akDuzen"></select></label>
+      </div>
+      <table class="tablo" id="akTablo"><thead><tr><th>Tel</th><th>Nota</th><th class="sayi">Frekans</th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <!-- SAP -->
+  <section id="v-sap" class="gorunum" data-v="sap" hidden>
+    <header class="baslik"><h1>Perde haritası</h1><div class="baslik-sag" id="sapOzet"></div></header>
+    <div class="panel-satir arac">
+      <label class="alan"><span class="etiket">Düzen</span><select id="sapDuzen"></select></label>
+      <label class="alan"><span class="etiket">Makam</span><select id="sapMakam"></select></label>
+      <label class="alan"><span class="etiket">Karar</span><select id="sapKarar"></select></label>
+    </div>
+    <div class="sap-cerceve">
+      <div class="sap-sabit" id="sapSabit"></div>
+      <div class="sap-kap" id="sapKap"><div class="sap" id="sap"></div></div>
+    </div>
+    <div class="sap-kontrol">
+      <button class="btn ikon" id="zoomEksi" aria-label="Uzaklaştır"><svg><use href="#i-eksi"/></svg></button>
+      <input type="range" id="sapKaydir" min="0" max="1000" value="0" aria-label="Sapta konum">
+      <button class="btn ikon" id="zoomArti" aria-label="Yakınlaştır"><svg><use href="#i-arti"/></svg></button>
+    </div>
+    <div class="lejant" id="lejant">
+      <span><i class="nokta k"></i>Karar</span><span><i class="nokta g"></i>Güçlü</span><span><i class="nokta m"></i>Dizi sesi</span>
+    </div>
+    <div class="panel perde-bilgi" id="perdeBilgi" aria-live="polite">
+      <p class="soluk">Ayrıntısını görmek için sapta bir perdeye dokunun.</p>
+    </div>
+  </section>
+
+  <!-- MAKAM -->
+  <section id="v-makam" class="gorunum" data-v="makam" hidden>
+    <header class="baslik"><h1>Makam dizileri</h1></header>
+    <div class="panel-satir arac">
+      <label class="alan"><span class="etiket">Karar</span><select id="mkKarar"></select></label>
+      <label class="alan genis"><span class="etiket">Ara</span><input id="mkAra" type="search" placeholder="Makam adı" enterkeyhint="search" autocomplete="off"></label>
+    </div>
+    <p class="not">Aralıklar 53 koma sistemine (Arel-Ezgi-Uzdilek) göredir ve seçtiğiniz karara taşınır. Sazınızda karşılığı olmayan sesler kesik çizgiyle işaretlenir.</p>
+    <ol class="mk-liste" id="mkListe"></ol>
+    <div class="panel">
+      <h2>Kendi dizini ekle</h2>
+      <div class="panel-satir">
+        <label class="alan"><span class="etiket">Ad</span><input id="mkYeniAd" maxlength="40" placeholder="Örn. Hüzzam denemesi" autocomplete="off"></label>
+        <label class="alan genis"><span class="etiket">Aralıklar (koma)</span><input id="mkYeniAra" inputmode="numeric" placeholder="8 5 9 9 4 9 9" autocomplete="off"></label>
+        <div class="alan dar"><span class="etiket">&nbsp;</span><button class="btn" id="mkEkle">Ekle</button></div>
+      </div>
+      <p class="not" id="mkEkleMsj" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- METRONOM -->
+  <section id="v-ritim" class="gorunum" data-v="ritim" hidden>
+    <header class="baslik"><h1>Metronom</h1><div class="baslik-sag" id="usulAd"></div></header>
+    <div class="met-ust">
+      <button class="btn ikon buyuk" id="bpmEksi" aria-label="Tempoyu azalt"><svg><use href="#i-eksi"/></svg></button>
+      <div class="bpm"><output id="bpmDeger">90</output><span>vuruş / dk</span></div>
+      <button class="btn ikon buyuk" id="bpmArti" aria-label="Tempoyu artır"><svg><use href="#i-arti"/></svg></button>
+    </div>
+    <input type="range" id="bpmKaydir" min="30" max="300" value="90" aria-label="Tempo">
+    <div class="vuruslar" id="vuruslar" aria-hidden="true"></div>
+    <div class="dugmeler orta">
+      <button class="btn birincil buyuk" id="metBasla"><svg><use href="#i-oynat"/></svg><span>Başlat</span></button>
+      <button class="btn buyuk" id="metTap">Tempoyu dokunarak bul</button>
+    </div>
+    <div class="panel">
+      <div class="panel-satir">
+        <label class="alan"><span class="etiket">Usul</span><select id="usulSec"></select></label>
+        <label class="alan pro"><span class="etiket">Özel gruplama</span><input id="usulOzel" placeholder="2+2+3" inputmode="numeric" autocomplete="off"></label>
+        <label class="alan"><span class="etiket">Tını</span><select id="metSes"><option value="tik">Tık</option><option value="tok">Tahta</option><option value="dum">Düm · tek</option></select></label>
+        <label class="alan"><span class="etiket">Ses düzeyi</span><input type="range" id="metVol" min="0" max="100"></label>
+      </div>
+      <p class="not">Tempo, ölçünün birim vuruşunu sayar (9/8'de sekizlik). Büyük nokta ölçü başı, orta nokta grup başıdır. Boşluk tuşu başlatır ve durdurur. Başka bölüme geçince de çalmaya devam eder.</p>
+    </div>
+    <div class="ritim-izgara">
+      <div class="panel">
+        <h2>Zamanlama testi</h2>
+        <p class="not">Metronom 4 ölçü çalar; siz her tıkta tele vurursunuz. Uygulama vuruşlarınızı mikrofonla dinleyip ne kadar düzenli çaldığınızı ölçer.</p>
+        <div class="dugmeler"><button class="btn birincil" id="ztBasla"><svg><use href="#i-hedef"/></svg><span>Testi başlat</span></button></div>
+        <div class="zt-sonuc" id="ztSonuc" aria-live="polite"></div>
+      </div>
+      <div class="panel pro">
+        <h2>Hızlanan tempo</h2>
+        <p class="not">Metronom belirlediğiniz aralıklarla kendiliğinden hızlanır; hedef tempoya ulaşınca o tempoda kalır.</p>
+        <div class="panel-satir">
+          <label class="alan dar"><span class="etiket">Başlangıç</span><input id="htBas" type="number" min="30" max="300" value="70" inputmode="numeric"></label>
+          <label class="alan dar"><span class="etiket">Hedef</span><input id="htHedef" type="number" min="30" max="300" value="120" inputmode="numeric"></label>
+          <label class="alan dar"><span class="etiket">Artış</span><input id="htArtis" type="number" min="1" max="30" value="4" inputmode="numeric"></label>
+          <label class="alan dar"><span class="etiket">Her kaç ölçüde</span><input id="htOlcu" type="number" min="1" max="32" value="4" inputmode="numeric"></label>
+        </div>
+        <div class="dugmeler" style="margin-top:14px"><button class="btn" id="htBasla"><svg><use href="#i-oynat"/></svg><span>Hızlanan tempoyu başlat</span></button><span class="not" id="htDurum"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KULAK -->
+  <section id="v-kulak" class="gorunum" data-v="kulak" hidden>
+    <header class="baslik"><h1>Kulak eğitimi</h1>
+      <div class="skor" aria-live="polite"><span>Doğru <b id="egzDogru">0</b></span><span>Yanlış <b id="egzYanlis">0</b></span><span>Seri <b id="egzSeri">0</b></span><span>Rekor <b id="egzRekor">0</b></span></div>
+    </header>
+    <div class="sekmeler genis" id="egzMod" role="radiogroup" aria-label="Alıştırma">
+      <button role="radio" data-m="perde">Perde bulma</button>
+      <button role="radio" data-m="aralik">Aralık tanıma</button>
+    </div>
+    <div class="panel-satir arac" id="egzAyar"></div>
+    <div class="soru-alani">
+      <p class="soru" id="egzSoru" aria-live="polite">“Yeni soru” ile başlayın. Sesi dinleyin, doğru cevabı seçin.</p>
+      <div class="dugmeler orta">
+        <button class="btn birincil buyuk" id="egzYeni">Yeni soru</button>
+        <button class="btn" id="egzTekrar" disabled><svg><use href="#i-ses"/></svg><span>Tekrar dinle</span></button>
+        <button class="btn" id="egzKarar"><span>Karar sesi</span></button>
+      </div>
+      <div class="secenekler" id="egzSecenek"></div>
+    </div>
+  </section>
+
+  <!-- DEFTER -->
+  <section id="v-defter" class="gorunum" data-v="defter" hidden>
+    <header class="baslik"><h1>Çalışma defteri</h1><div class="baslik-sag" id="dfHafta"></div></header>
+    <div class="defter-izgara">
+      <div class="panel kronometre">
+        <h2>Çalışma süresi</h2>
+        <div class="sure" id="krSure">0:00:00</div>
+        <label class="alan"><span class="etiket">Eser</span><select id="krEser"></select></label>
+        <div class="dugmeler"><button class="btn birincil buyuk" id="krBasla"><svg><use href="#i-oynat"/></svg><span>Başlat</span></button></div>
+      </div>
+      <div class="panel">
+        <h2>Kayıtlarım</h2>
+        <p class="not" id="skBilgi">Mikrofonla çalışınızı kaydedin; kayıtlar bu cihazda saklanır.</p>
+        <div class="dugmeler"><button class="btn birincil" id="skKayit"><svg><use href="#i-kayit"/></svg><span>Kaydı başlat</span></button><span class="not" id="skDurum"></span></div>
+        <ul class="kayitlar" id="skListe"></ul>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Repertuvar</h2>
+      <div class="panel-satir">
+        <label class="alan genis"><span class="etiket">Eser adı</span><input id="esAd" maxlength="80" placeholder="Örn. Uzun ince bir yoldayım" autocomplete="off"></label>
+        <label class="alan"><span class="etiket">Makam</span><select id="esMakam"></select></label>
+        <label class="alan"><span class="etiket">Düzen</span><select id="esDuzen"></select></label>
+        <label class="alan dar"><span class="etiket">Tempo</span><input id="esBpm" type="number" min="30" max="300" inputmode="numeric" placeholder="—"></label>
+        <div class="alan dar"><span class="etiket">&nbsp;</span><button class="btn" id="esEkle">Ekle</button></div>
+      </div>
+      <p class="hata" id="esHata" hidden></p>
+      <div class="tablo-kap"><table class="tablo" id="esTablo">
+        <thead><tr><th>Eser</th><th>Makam</th><th>Düzen</th><th class="sayi">Tempo</th><th>Durum</th><th class="sayi">Çalışma</th><th><span class="gizli-metin">İşlem</span></th></tr></thead>
+        <tbody></tbody></table></div>
+    </div>
+    <div class="panel">
+      <h2>Son çalışmalar</h2>
+      <ul class="oturumlar" id="otListe"></ul>
+    </div>
+    <div class="panel">
+      <h2>Yedek</h2>
+      <div class="dugmeler"><button class="btn" id="yedekAl">Dışa aktar</button><label class="btn">İçe aktar<input type="file" id="yedekYukle" accept="application/json,.json" hidden></label></div>
+      <p class="not" id="yedekMsj" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- AYARLAR -->
+  <section id="v-ayar" class="gorunum" data-v="ayar" hidden>
+    <header class="baslik"><h1>Ayarlar</h1></header>
+    <div class="ayar-grup">
+      <h2>Kullanım modu</h2>
+      <div class="sekmeler genis" id="ayMod" role="radiogroup" aria-label="Kullanım modu">
+        <button role="radio" data-mod="kolay">Kolay</button><button role="radio" data-mod="pro">Profesyonel</button>
+      </div>
+      <p class="not" id="ayModBilgi"></p>
+    </div>
+    <div class="ayar-grup">
+      <h2>Düzen</h2>
+      <label class="alan"><span class="etiket">Hazır ya da kayıtlı düzen</span><select id="ayDuzen"></select></label>
+      <div class="tel-duzen" id="ayTeller"></div>
+      <div class="panel-satir">
+        <label class="alan genis"><span class="etiket">Bu düzeni şu adla kaydet</span><input id="ayDuzenAd" maxlength="30" placeholder="Düzen adı" autocomplete="off"></label>
+        <div class="alan dar"><span class="etiket">&nbsp;</span><button class="btn" id="ayDuzenKaydet">Kaydet</button></div>
+        <div class="alan dar"><span class="etiket">&nbsp;</span><button class="btn tehlike" id="ayDuzenSil" hidden>Sil</button></div>
+      </div>
+      <p class="not">Düzen adları ve tel sıraları kaynaklarda farklı verilebiliyor; teller her zaman buradan değiştirilebilir.</p>
+      <p class="not kolay-yalniz">Ahenk, perde düzeni ve referans sesi ayarları Profesyonel modda görünür.</p>
+    </div>
+    <div class="ayar-grup pro">
+      <h2>Ahenk</h2>
+      <div class="panel-satir">
+        <label class="alan"><span class="etiket">La referansı (Hz)</span><input id="ayA4" type="number" min="380" max="480" step="0.1" inputmode="decimal"></label>
+        <label class="alan"><span class="etiket">Transpoze (yarım ses)</span><input id="ayTrans" type="number" min="-12" max="12" step="1" inputmode="numeric"></label>
+        <label class="alan"><span class="etiket">İnce ayar (sent)</span><input id="ayInce" type="number" min="-50" max="50" step="1" inputmode="numeric"></label>
+      </div>
+      <p class="not" id="ayAhenkBilgi"></p>
+    </div>
+    <div class="ayar-grup pro">
+      <h2>Perdeler</h2>
+      <div class="panel-satir">
+        <label class="alan"><span class="etiket">Perde düzeni</span><select id="ayPerdeHazir"><option value="53">Bağlama · 17 perde (53 koma)</option><option value="12">Eşit 12 perde</option><option value="ozel">Özel</option></select></label>
+        <div class="alan"><span class="etiket">Sap</span><div class="sekmeler" id="aySap" role="radiogroup" aria-label="Sap boyu"><button role="radio" data-s="kisa">Kısa</button><button role="radio" data-s="uzun">Uzun</button></div></div>
+        <label class="alan dar"><span class="etiket">Perde sayısı</span><input id="ayPerdeSayi" type="number" min="8" max="45" inputmode="numeric"></label>
+      </div>
+      <p class="not">Boş tele göre bir oktav içindeki perdeler; her oktavda tekrarlanır. İşaretini kaldırdığınız perde sapta görünmez.</p>
+      <div class="perde-liste" id="ayPerdeler"></div>
+      <div class="panel-satir">
+        <label class="alan"><span class="etiket">Perde ekle</span><input id="ayPerdeYeni" inputmode="decimal" placeholder="12k (koma) ya da 250 (sent)" autocomplete="off"></label>
+        <div class="alan dar"><span class="etiket">&nbsp;</span><button class="btn" id="ayPerdeEkle">Ekle</button></div>
+      </div>
+      <p class="hata" id="ayPerdeHata" hidden></p>
+    </div>
+    <div class="ayar-grup pro">
+      <h2>Referans sesleri</h2>
+      <div class="kaydiricilar">
+        <label class="alan"><span class="etiket">Ses düzeyi</span><input type="range" id="sVol" min="0" max="100"></label>
+        <label class="alan"><span class="etiket">Parlaklık</span><input type="range" id="sParlak" min="0" max="100"></label>
+        <label class="alan"><span class="etiket">Tını süresi</span><input type="range" id="sSure" min="0" max="100"></label>
+        <label class="alan"><span class="etiket">Yankı</span><input type="range" id="sYanki" min="0" max="100"></label>
+      </div>
+      <div class="dugmeler"><button class="btn" id="sDene"><svg><use href="#i-ses"/></svg><span>Dinle</span></button></div>
+    </div>
+    <div class="ayar-grup">
+      <h2>Görünüm</h2>
+      <div class="panel-satir">
+        <label class="alan"><span class="etiket">Tema</span><select id="gTema"><option value="koyu">Koyu</option><option value="acik">Açık</option><option value="oto">Cihaza göre</option></select></label>
+        <label class="alan"><span class="etiket">Not adları</span><select id="gIsim"><option value="tr">Türkçe · La, Si, Do</option><option value="harf">Harf · A, B, C</option></select></label>
+      </div>
+      <div class="secimler">
+        <label><input type="checkbox" id="gOktav"> Oktav numarasını göster</label>
+        <label><input type="checkbox" id="gPerdeNo"> Sapta perde numaralarını göster</label>
+        <label><input type="checkbox" id="gTumNot"> Sapta tüm not adlarını göster (kapalıysa yalnız makam sesleri)</label>
+        <label><input type="checkbox" id="gSolak"> Solak: sap ters yönde</label>
+      </div>
+      <p class="not">Not adındaki üst simge kaç koma değiştiğini gösterir: Si♭⁵, Si'nin 5 koma pesidir.</p>
+    </div>
+    <div class="ayar-grup">
+      <h2>Sıfırla</h2>
+      <p class="not">Ayarlar varsayılana döner. Defter, kayıtlı düzenler ve kendi dizileriniz silinmez.</p>
+      <div class="dugmeler"><button class="btn tehlike" id="aySifirla">Ayarları sıfırla</button></div>
+    </div>
+    <p class="not surum">Tezene <span id="surum"></span> · Çevrimdışı çalışır · Veriler yalnız bu cihazda tutulur.</p>
+  </section>
+</main>
+</div>
+<div class="bildirim" id="bildirim" role="status" hidden></div>
+<script src="dersler.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

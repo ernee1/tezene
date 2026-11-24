@@ -1,0 +1,9 @@
+{
+  "appId": "com.tezene.baglama",
+  "appName": "Tezene",
+  "webDir": "www",
+  "backgroundColor": "#120e0b",
+  "android": {
+    "allowMixedContent": false
+  }
+}
