@@ -1,0 +1,82 @@
+name: Android APK
+
+# main dalına her gönderimde ve Actions sekmesinden elle çalıştırılır.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu al
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Java 17 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Paketleri yükle
+        run: npm install --no-audit --no-fund
+
+      - name: Web dosyalarını hazırla
+        run: node scripts/www.js
+
+      - name: Android projesini oluştur
+        run: npx cap add android
+
+      - name: Mikrofon izni ve sürüm numarası
+        run: node scripts/android-hazirla.js ${{ github.run_number }}
+
+      - name: Simgeler ve açılış ekranı
+        run: npx capacitor-assets generate --android --iconBackgroundColor "#120e0b" --iconBackgroundColorDark "#120e0b" --splashBackgroundColor "#120e0b" --splashBackgroundColorDark "#120e0b"
+
+      - name: Eşitle
+        run: npx cap sync android
+
+      - name: Sabit imza anahtarını yerleştir
+        env:
+          ANAHTAR: ${{ secrets.ANDROID_IMZA_ANAHTARI }}
+        run: |
+          if [ -z "$ANAHTAR" ]; then
+            echo "::warning::ANDROID_IMZA_ANAHTARI yok; bu derleme geçici anahtarla imzalanıyor. Yeni sürümü kurmak için eskisini silmek gerekir."
+            exit 0
+          fi
+          mkdir -p ~/.android
+          echo "$ANAHTAR" | base64 -d > ~/.android/debug.keystore
+
+      - name: APK derle
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: APK dosyasını adlandır
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk "Tezene-${{ github.run_number }}.apk"
+
+      - name: Derleme çıktısı olarak sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: Tezene-apk-${{ github.run_number }}
+          path: Tezene-${{ github.run_number }}.apk
+
+      - name: Sürüm sayfasında yayınla
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: surum-${{ github.run_number }}
+          name: Tezene ${{ github.run_number }}
+          body: |
+            Android için Tezene. Telefonda APK dosyasını açıp yükleyin (gerekirse "bilinmeyen kaynaklardan yükleme" iznini verin).
+            Demo sürüm. Kalıcı imza anahtarı eklenene kadar yeni sürümü kurmadan önce eskisini silmeniz gerekebilir.
+          files: Tezene-${{ github.run_number }}.apk
